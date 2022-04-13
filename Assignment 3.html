@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 3</title>
+    </head>
+    <style>
+        form{
+            font-weight: bold;
+        }
+        .buttons{
+            font-weight: bold;
+            margin: 4px 0px 3px 2px ;
+        }
+    </style>
+    <script type="text/javascript">
+        function add(){
+            var num1 = parseInt(document.getElementsByName('number1')[0].value);
+            var num2 = parseInt(document.getElementsByName('number2')[0].value);
+            var res = num1+num2;
+            if(res !== res)alert("please enter 2 numbers");
+            else document.getElementsByName('result')[0].value=res;
+        }
+        function mul(){
+            var num1 = parseInt(document.getElementsByName('number1')[0].value);
+            var num2 = parseInt(document.getElementsByName('number2')[0].value);
+            var res = num1 * num2;
+            if(res !== res)alert("please enter 2 numbers");
+            else document.getElementsByName('result')[0].value=res;
+        }
+        function div(){
+            var num1 = parseInt(document.getElementsByName('number1')[0].value);
+            var num2 = parseInt(document.getElementsByName('number2')[0].value);
+            if(num2==0){
+                alert("Wrong input can't divide by zero");
+            }
+            else {
+                var res = num1 / num2;
+                if(res !== res)alert("please enter 2 numbers");
+                else document.getElementsByName('result')[0].value=res;
+            }
+        }
+        function sub(){
+            var num1 = parseInt(document.getElementsByName('number1')[0].value);
+            var num2 = parseInt(document.getElementsByName('number2')[0].value);
+            var res = num1 - num2;
+            if(res !== res)alert("please enter 2 numbers");
+            else document.getElementsByName('result')[0].value=res;
+        }
+        function mod(){
+            var num1 = parseInt(document.getElementsByName('number1')[0].value);
+            var num2 = parseInt(document.getElementsByName('number2')[0].value);
+            var res = num1 % num2;
+            if(res !== res)alert("please enter 2 numbers");
+            else document.getElementsByName('result')[0].value=res;
+        }
+    </script>
+    <body>
+        <b>View plainprint ?</b>
+        <form>
+            Number 1 : <input type="number" name="number1">
+            <br>
+            Number 2 : <input type="number" name="number2" style="margin: 3px 0px 0px 0px ;">
+            <br>
+                <button type="button" onclick="add()" class="buttons" >ADD</button>
+                <button type="button" onclick="sub()" class="buttons">SUB</button>
+                <button type="button" onclick="mul()" class="buttons">MUL</button>
+                <button type="button" onclick="div()" class="buttons">DIV</button>
+                <button type="button" onclick="mod()" class="buttons">MOD</button>
+            <br>
+            Get Result : <input name="result" type="textbox">
+        </form>
+    </body>
+</html>
